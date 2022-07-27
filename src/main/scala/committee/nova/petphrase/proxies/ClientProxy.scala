@@ -1,5 +1,3 @@
 package committee.nova.petphrase.proxies
 
-class ClientProxy extends CommonProxy {
-
-}
+class ClientProxy extends CommonProxy
