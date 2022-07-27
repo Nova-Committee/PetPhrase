@@ -10,7 +10,7 @@ class CommandClearPhrase extends CommandBase {
 
   override def getUsage(sender: ICommandSender): String = "/clearphrase --- Clear your pet phrase"
 
-  override def getRequiredPermissionLevel: Int = 1
+  override def getRequiredPermissionLevel: Int = 0
 
   @throws(classOf[PlayerNotFoundException])
   override def execute(server: MinecraftServer, sender: ICommandSender, args: Array[String]): Unit = {

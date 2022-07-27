@@ -10,7 +10,7 @@ class CommandSetPhrase extends CommandBase {
 
   override def getUsage(sender: ICommandSender): String = "/setphrase <Your Pet Phrase> --- Set your pet phrase to the inputted value"
 
-  override def getRequiredPermissionLevel: Int = 1
+  override def getRequiredPermissionLevel: Int = 0
 
   @throws(classOf[PlayerNotFoundException])
   override def execute(server: MinecraftServer, sender: ICommandSender, args: Array[String]): Unit = {
