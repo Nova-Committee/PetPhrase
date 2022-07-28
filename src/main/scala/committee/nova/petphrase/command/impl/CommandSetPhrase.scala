@@ -2,6 +2,7 @@ package committee.nova.petphrase.command.impl
 
 import committee.nova.petphrase.util.NBTUtil.nbtPhrase
 import net.minecraft.command.{CommandBase, ICommandSender, PlayerNotFoundException, WrongUsageException}
+import net.minecraft.entity.player.EntityPlayer
 import net.minecraft.server.MinecraftServer
 import net.minecraft.util.text.TextComponentString
 
@@ -9,6 +10,8 @@ class CommandSetPhrase extends CommandBase {
   override def getName: String = "setphrase"
 
   override def getUsage(sender: ICommandSender): String = "/setphrase <Your Pet Phrase> --- Set your pet phrase to the inputted value"
+
+  override def checkPermission(server: MinecraftServer, sender: ICommandSender): Boolean = sender.isInstanceOf[EntityPlayer]
 
   override def getRequiredPermissionLevel: Int = 0
 
