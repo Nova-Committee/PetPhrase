@@ -15,7 +15,7 @@ class CommandSetPhrase extends CommandBase {
 
   override def getRequiredPermissionLevel: Int = 0
 
-  @throws(classOf[PlayerNotFoundException])
+  @throws[PlayerNotFoundException]
   override def execute(server: MinecraftServer, sender: ICommandSender, args: Array[String]): Unit = {
     if (args.length != 1) throw new WrongUsageException(getUsage(sender))
     val phrase = args(0)
